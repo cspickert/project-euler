@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 def reverse_str(s):
-    return "".join([c for c in reversed(s)])
+    return reduce(lambda a, b: b + a, s)
 
 def is_palindrome(n):
     return str(n) == reverse_str(str(n))
