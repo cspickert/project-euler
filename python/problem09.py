@@ -20,9 +20,10 @@
 # m(m + n) = 500
 
 def pythagorean_triple(n):
-    for m in range(n / 2):
+    n_2 = n / 2
+    for m in range(n_2):
         for n in range(m):
-            if m * (m + n) == 500:
+            if m * (m + n) == n_2:
                 return [m ** 2 - n ** 2, 2 * m * n, m ** 2 + n ** 2]
 
 def problem9():
