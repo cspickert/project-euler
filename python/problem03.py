@@ -1,21 +1,24 @@
 #!/usr/bin/python
 
 import math
+import itertools
+
+def gen_primes():
+    """http://stackoverflow.com/questions/567222/simple-prime-generator-in-python"""
+    d = {}
+    q = 2
+    while True:
+        if q not in d:
+            yield q
+            d[q * q] = [q]
+        else:
+            for p in d[q]:
+                d.setdefault(p + q, []).append(p)
+            del d[q]
+        q += 1
 
 def primes_less_than(n):
-	"""http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"""
-	if n == 1:
-		return [1]
-	marked = [False, False] + [True] * (n - 2)
-	for i in xrange(2, n / 2):
-		if marked[i]:
-			for j in xrange(2 * i, n, i):
-				marked[j] = False
-	primes = []
-	for i, ele in enumerate(marked):
-		if ele:
-			primes.append(i)
-	return primes
+    return itertools.takewhile(lambda p: p < n, gen_primes())
 
 def problem3():
 	n = 600851475143
