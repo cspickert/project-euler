@@ -10,4 +10,4 @@ def problem7():
     return gen.next()
 
 if __name__ == "__main__":
-    print problem7()
+    print "7:", problem7()

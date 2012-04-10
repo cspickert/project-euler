@@ -15,4 +15,4 @@ def problem2():
     return total
 
 if __name__ == "__main__":
-    print problem2()
+    print "2:", problem2()

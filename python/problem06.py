@@ -14,4 +14,4 @@ def problem6():
     return abs(sum_of_squares(n) - square_of_sum(n))
 
 if __name__ == "__main__":
-    print problem6()
+    print "6:", problem6()

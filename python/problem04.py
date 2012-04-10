@@ -16,4 +16,4 @@ def problem4():
     return max(palindromes)
 
 if __name__ == "__main__":
-    print problem4()
+    print "4:", problem4()

@@ -37,4 +37,4 @@ def problem3():
 	return max(prime_factors)
 
 if __name__ == "__main__":
-	print problem3()
+	print "3:", problem3()

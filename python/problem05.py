@@ -21,4 +21,4 @@ def problem5():
     return n
 
 if __name__ == "__main__":
-    print problem5()
+    print "5:", problem5()
